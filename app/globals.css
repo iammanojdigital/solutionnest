@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
+/* Cinematic Design System - Migrated from ClickLab & Adapted to Solutions Nest */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F5F7FA;
+  --foreground: #1F2F5A;
+  --navy: #1F2F5A;
+  --orange: #F57C00;
+  --light: #F5F7FA;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-orange: var(--orange);
+  --color-light: var(--light);
+  --font-sans: var(--font-outfit), var(--font-geist-sans);
+  --font-outfit: var(--font-outfit);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-orange to-[#ff9800];
+  }
+  
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white shadow-2xl;
+  }
+  
+  .glass-dark {
+    @apply bg-navy/40 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  /* Marquee Animations */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  /* Cinematic Aurora Background Keyframes */
+  @keyframes auroraOrb1 {
+    0%   { transform: rotate(0) translate(150px) rotate(0); }
+    100% { transform: rotate(1turn) translate(150px) rotate(-1turn); }
+  }
+  @keyframes auroraOrb2 {
+    0%   { transform: rotate(0) translate(200px) rotate(0); }
+    100% { transform: rotate(-1turn) translate(200px) rotate(1turn); }
+  }
+  @keyframes auroraRipple {
+    0%   { transform: translate(-50%, -50%) scale(0.4); opacity: 0.5; }
+    100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+  }
+  @keyframes heroWaveFlow {
+    0%   { transform: translateX(0) scaleY(1); }
+    50%  { transform: translateX(-25%) scaleY(1.08); }
+    100% { transform: translateX(0) scaleY(1); }
+  }
+
+  .hero-orb-1 { animation: auroraOrb1 15s linear infinite; will-change: transform; }
+  .hero-orb-2 { animation: auroraOrb2 18s linear infinite; will-change: transform; }
+  .hero-ripple {
+    @apply absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    will-change: transform, opacity;
+  }
+  .hero-ripple-1 { animation: auroraRipple 8s ease-out infinite; }
+  .hero-ripple-2 { animation: auroraRipple 8s ease-out infinite 2.5s; }
+  
+  .hero-wave {
+    animation: heroWaveFlow 12s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  /* Shimmer for Buttons */
+  .btn-shimmer {
+    @apply relative overflow-hidden;
+  }
+  .btn-shimmer::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%) skewX(-12deg);
+    animation: shimmer-swipe 3.5s ease-in-out infinite 1s;
+  }
+  @keyframes shimmer-swipe {
+    0%   { transform: translateX(-100%) skewX(-12deg); }
+    100% { transform: translateX(300%) skewX(-12deg); }
+  }
+
+  /* Standard Animation Fallbacks */
+  .animate-reveal {
+    animation: reveal-animation 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+  @keyframes reveal-animation {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  .animate-progress {
+    animation: progress-animation 2s infinite ease-in-out;
+  }
+  @keyframes progress-animation {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(300%); }
   }
 }
 
+html,
 body {
+  max-width: 100%;
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* WhatsApp Pulse Animation */
+@keyframes whatsappPulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.animate-whatsapp {
+  animation: whatsappPulse 2s infinite;
 }
