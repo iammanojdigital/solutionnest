@@ -8,13 +8,14 @@ export function Header() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[100] px-4 py-4 md:px-6 md:py-6">
-      <div className="max-w-7xl mx-auto w-full flex items-center justify-between bg-white/70 backdrop-blur-xl px-4 py-4 md:px-8 md:py-5 rounded-2xl md:rounded-3xl relative z-20 border border-white shadow-xl shadow-[#1F2F5A]/5">
+      <div className="max-w-7xl mx-auto w-full flex items-center justify-between bg-white px-4 py-4 md:px-8 md:py-5 rounded-2xl md:rounded-3xl relative z-20 border border-white shadow-2xl shadow-[#1F2F5A]/5">
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 md:w-10 md:h-10 bg-[#1F2F5A] rounded-lg md:rounded-xl flex items-center justify-center text-white font-black text-lg md:text-xl shadow-lg shadow-[#1F2F5A]/20">S</div>
+          <div className="w-8 h-8 md:w-10 md:h-10 bg-[#F57C00] rounded-lg md:rounded-xl flex items-center justify-center text-white font-black text-lg md:text-xl shadow-lg shadow-[#F57C00]/20">S</div>
           <span className="text-xl md:text-2xl font-black tracking-tighter text-[#1F2F5A] uppercase italic">Solutions <span className="text-[#F57C00]">Nest</span></span>
         </Link>
         
         <div className="hidden md:flex items-center gap-8 text-[#1F2F5A]/60 font-bold uppercase text-xs tracking-widest">
+          <Link href="/" className="hover:text-[#F57C00] transition-colors">{/* Home Icon or Text */}Home</Link>
           <Link href="/#services" className="hover:text-[#F57C00] transition-colors">Services</Link>
           <Link href="/about" className="hover:text-[#F57C00] transition-colors">About Us</Link>
           <Link href="/case-studies" className="hover:text-[#F57C00] transition-colors">Case Studies</Link>
@@ -47,7 +48,8 @@ export function Header() {
 
       {/* Mobile Menu Tray */}
       {isMenuOpen && (
-        <div className="md:hidden mt-4 bg-white/70 backdrop-blur-xl p-8 rounded-[2rem] flex flex-col gap-8 text-center animate-reveal relative z-10 shadow-2xl border border-[#1F2F5A]/5">
+        <div className="md:hidden mt-4 bg-white p-8 rounded-[2rem] flex flex-col gap-8 text-center animate-reveal relative z-10 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-[#1F2F5A]/5">
+          <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-[#1F2F5A] font-black uppercase text-sm tracking-widest hover:text-[#F57C00]">Home</Link>
           <Link href="/#services" onClick={() => setIsMenuOpen(false)} className="text-[#1F2F5A] font-black uppercase text-sm tracking-widest hover:text-[#F57C00]">Services</Link>
           <Link href="/about" onClick={() => setIsMenuOpen(false)} className="text-[#1F2F5A] font-black uppercase text-sm tracking-widest hover:text-[#F57C00]">About Us</Link>
           <Link href="/case-studies" onClick={() => setIsMenuOpen(false)} className="text-[#1F2F5A] font-black uppercase text-sm tracking-widest hover:text-[#F57C00]">Case Studies</Link>

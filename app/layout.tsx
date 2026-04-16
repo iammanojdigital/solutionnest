@@ -35,7 +35,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-outfit overflow-x-hidden">
+      <body className="min-h-full flex flex-col font-outfit overflow-x-hidden bg-[#0A0F1E] text-white selection:bg-[#F57C00]/30">
         <Header />
         <main className="flex-grow w-full max-w-full overflow-x-hidden relative">
           {children}

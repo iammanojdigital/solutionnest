@@ -57,7 +57,7 @@ export function HomeContent() {
   return (
     <div className="flex flex-col min-h-screen w-full overflow-x-hidden bg-[#F5F7FA] text-[#1F2F5A] selection:bg-[#F57C00]/30">
 
-      {/* Clean Hero Section */}
+      {/* Clean Hero Section - WHITE */}
       <section className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-[#F5F7FA] pt-32 pb-20 px-6">
         {/* ========== Subtle Brand Texture ========== */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden w-full h-full">
@@ -66,7 +66,7 @@ export function HomeContent() {
 
           {/* Dot Grid */}
           <div className="absolute inset-0 opacity-[0.03] w-full h-full"
-            style={{ backgroundImage: 'radial-gradient(var(--navy) 1px, transparent 1px)', backgroundSize: '40px 40px' }}
+            style={{ backgroundImage: 'radial-gradient(#1F2F5A 1px, transparent 1px)', backgroundSize: '40px 40px' }}
           />
         </div>
 
@@ -79,10 +79,10 @@ export function HomeContent() {
           </div>
 
           <div className="space-y-6 w-full max-w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-8xl font-black tracking-tighter text-[#1F2F5A] leading-[0.9] uppercase italic flex flex-col items-center w-full break-words">
-              <span className="animate-reveal inline-block max-w-full">Scale your</span>
-              <span className="animate-reveal inline-block text-[#F57C00] [animation-delay:200ms] max-w-full">Digital</span>
-              <span className="animate-reveal inline-block [animation-delay:400ms] max-w-full">Empire.</span>
+            <h1 className="text-3xl sm:text-4xl md:text-8xl font-black tracking-tighter text-[#1F2F5A] leading-[0.9] uppercase flex flex-col items-center w-full break-words">
+              <span className="animate-reveal inline-block max-w-full italic pr-6 overflow-visible">Scale your</span>
+              <span className="animate-reveal inline-block text-[#F57C00] [animation-delay:200ms] max-w-full italic pr-6 overflow-visible">Digital</span>
+              <span className="animate-reveal inline-block [animation-delay:400ms] max-w-full italic pr-6 overflow-visible">Empire.</span>
             </h1>
             
             <p className="text-lg md:text-2xl text-[#1F2F5A]/60 font-medium animate-reveal [animation-delay:600ms] leading-relaxed max-w-2xl mx-auto px-4">
@@ -93,65 +93,79 @@ export function HomeContent() {
           {/* CTA Group */}
           <div className="flex flex-col sm:flex-row items-center gap-6 w-full justify-center animate-reveal [animation-delay:400ms] mt-16">
             <a 
-              href="https://wa.me/919008011333" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+              href="tel:+919008011333" 
               className="btn-shimmer flex items-center justify-center w-full sm:w-auto px-14 py-6 bg-[#1F2F5A] text-white rounded-2xl font-black text-2xl shadow-2xl shadow-[#1F2F5A]/20 active:scale-95 transition-all"
             >
               Get Started →
             </a>
             <a 
-              href="https://wa.me/919008011333" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+              href="tel:+919008011333" 
               className="flex items-center justify-center w-full sm:w-auto px-14 py-6 bg-white/70 backdrop-blur-xl text-[#1F2F5A] rounded-2xl font-black text-2xl border border-[#1F2F5A]/10 hover:bg-white/40 active:scale-95 transition-all uppercase"
             >
               Our Expertise
             </a>
           </div>
 
-          {/* Trust Labels */}
-          <div className="mt-16 flex items-center gap-6 text-[10px] md:text-xs font-black text-[#1F2F5A]/20 uppercase tracking-[0.3em] animate-reveal [animation-delay:600ms]">
-            <span>Data-Driven</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#1F2F5A]/10" />
-            <span>ROI Focused</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#1F2F5A]/10" />
-            <span>Scale Bound</span>
+          {/* Trust Labels Bar - Fast Moving */}
+          <div className="mt-16 w-full max-sm:px-4 overflow-hidden flex items-center justify-center animate-reveal [animation-delay:600ms] border-y border-[#1F2F5A]/5 py-3">
+            <div className="flex animate-marquee-superfast gap-8 whitespace-nowrap items-center min-w-full">
+              {/* First Set */}
+              {[
+                "Data-Driven", "ROI Focused", "Scale Bound", "Data-Driven", "ROI Focused", "Scale Bound",
+                "Data-Driven", "ROI Focused", "Scale Bound", "Data-Driven", "ROI Focused", "Scale Bound"
+              ].map((item, i) => (
+                <div key={`set1-${i}`} className="flex items-center gap-4">
+                  <span className="text-[10px] md:text-xs font-black text-[#1F2F5A]/40 uppercase tracking-[0.3em]">{item}</span>
+                  <span className="w-1 h-1 rounded-full bg-[#F57C00]/30" />
+                </div>
+              ))}
+              {/* Second Set (Identical for Seamless Loop) */}
+              {[
+                "Data-Driven", "ROI Focused", "Scale Bound", "Data-Driven", "ROI Focused", "Scale Bound",
+                "Data-Driven", "ROI Focused", "Scale Bound", "Data-Driven", "ROI Focused", "Scale Bound"
+              ].map((item, i) => (
+                <div key={`set2-${i}`} className="flex items-center gap-4">
+                  <span className="text-[10px] md:text-xs font-black text-[#1F2F5A]/40 uppercase tracking-[0.3em]">{item}</span>
+                  <span className="w-1 h-1 rounded-full bg-[#F57C00]/30" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Expertise Marquee Section */}
-      <section className="py-12 bg-white border-y border-[#1F2F5A]/5 overflow-hidden">
-        <div className="flex animate-marquee gap-12 whitespace-nowrap items-center">
+      {/* Expertise Marquee Section - BLUE */}
+      <section className="py-14 bg-[#1F2F5A] border-y border-white/5 overflow-hidden relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F57C00]/5 to-transparent pointer-events-none" />
+        <div className="flex animate-marquee-fast gap-12 whitespace-nowrap items-center">
           {[
             "Web Development", "App Engineering", "Digital Marketing", 
             "Legal & Compliance", "Financial Planning", "HR Solutions", 
             "Brand Identity", "UI/UX Design", "Company Incorporation",
             "Statutory Registrations", "Tax Planning", "Recruitment"
           ].map((item, i) => (
-            <div key={i} className="flex items-center gap-4 group">
-              <span className="text-2xl md:text-3xl font-black text-[#1F2F5A]/10 group-hover:text-[#F57C00] transition-colors tracking-tighter uppercase italic">{item}</span>
-              <div className="w-3 h-3 rounded-full bg-[#F57C00]/20" />
+            <div key={`exp1-${i}`} className="flex items-center gap-4 group">
+              <span className="text-2xl md:text-3xl font-black text-white group-hover:text-[#F57C00] transition-colors tracking-tighter uppercase italic">{item}</span>
+              <div className="w-3 h-3 rounded-full bg-[#F57C00] shadow-[0_0_10px_rgba(245,124,0,0.5)]" />
             </div>
           ))}
-          {/* Duplicate for seamless loop */}
+          {/* Duplicate for seamless loop (Second Set) */}
           {[
             "Web Development", "App Engineering", "Digital Marketing", 
             "Legal & Compliance", "Financial Planning", "HR Solutions", 
             "Brand Identity", "UI/UX Design", "Company Incorporation",
             "Statutory Registrations", "Tax Planning", "Recruitment"
           ].map((item, i) => (
-            <div key={`dup-${i}`} className="flex items-center gap-4 group">
-              <span className="text-2xl md:text-3xl font-black text-[#1F2F5A]/10 group-hover:text-[#F57C00] transition-colors tracking-tighter uppercase italic">{item}</span>
-              <div className="w-3 h-3 rounded-full bg-[#F57C00]/20" />
+            <div key={`exp2-${i}`} className="flex items-center gap-4 group">
+              <span className="text-2xl md:text-3xl font-black text-white group-hover:text-[#F57C00] transition-colors tracking-tighter uppercase italic">{item}</span>
+              <div className="w-3 h-3 rounded-full bg-[#F57C00] shadow-[0_0_10px_rgba(245,124,0,0.5)]" />
             </div>
           ))}
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-24 px-6 bg-[#F5F7FA] relative overflow-hidden">
+      {/* Services Section - WHITE */}
+      <section id="services" className="py-24 px-6 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-[#1F2F5A]/5 to-transparent" />
         
         <div className="max-w-7xl mx-auto">
@@ -168,9 +182,9 @@ export function HomeContent() {
               <Link 
                 href={`/services/${service.slug}`}
                 key={index} 
-                className="group p-8 rounded-[2.5rem] bg-white border border-[#1F2F5A]/5 hover:border-[#F57C00]/30 hover:shadow-2xl hover:shadow-[#1F2F5A]/5 transition-all duration-500 hover:-translate-y-2"
+                className="group p-8 rounded-[2.5rem] bg-[#F5F7FA] border border-[#1F2F5A]/5 hover:border-[#F57C00]/30 hover:shadow-2xl hover:shadow-[#1F2F5A]/5 transition-all duration-500 hover:-translate-y-2"
               >
-                <div className="w-16 h-16 bg-[#F5F7FA] border border-[#1F2F5A]/5 rounded-[1.5rem] flex items-center justify-center text-3xl mb-8 group-hover:bg-[#F57C00]/10 group-hover:border-[#F57C00]/20 transition-all">
+                <div className="w-16 h-16 bg-white border border-[#1F2F5A]/5 rounded-[1.5rem] flex items-center justify-center text-3xl mb-8 group-hover:bg-[#F57C00]/10 group-hover:border-[#F57C00]/20 transition-all">
                   {service.icon}
                 </div>
                 <h4 className="text-2xl font-black mb-4 text-[#1F2F5A] group-hover:text-[#F57C00] transition-colors tracking-tight">{service.title}</h4>
