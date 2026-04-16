@@ -98,12 +98,12 @@ export function HomeContent() {
             >
               Get Started →
             </a>
-            <a 
-              href="tel:+919008011333" 
+            <Link 
+              href="/#services" 
               className="flex items-center justify-center w-full sm:w-auto px-14 py-6 bg-white/70 backdrop-blur-xl text-[#1F2F5A] rounded-2xl font-black text-2xl border border-[#1F2F5A]/10 hover:bg-white/40 active:scale-95 transition-all uppercase"
             >
               Our Expertise
-            </a>
+            </Link>
           </div>
 
           {/* Trust Labels Bar - Fast Moving */}
