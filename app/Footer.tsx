@@ -32,7 +32,7 @@ export function Footer() {
               <span className="text-[#F57C00] text-lg">📧</span> info@solutionsnest.com
             </li>
             <li className="flex items-center gap-3 font-bold text-white/60 text-sm">
-              <span className="text-[#F57C00] text-lg">📞</span> +91 90080 11333
+              <span className="text-[#F57C00] text-lg">📞</span> +91 9845133461
             </li>
           </ul>
         </div>

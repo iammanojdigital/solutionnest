@@ -84,7 +84,7 @@ export function HomeContent() {
               <span className="animate-reveal inline-block text-[#F57C00] [animation-delay:200ms] max-w-full italic pr-6 overflow-visible">Digital</span>
               <span className="animate-reveal inline-block [animation-delay:400ms] max-w-full italic pr-6 overflow-visible">Empire.</span>
             </h1>
-            
+
             <p className="text-lg md:text-2xl text-[#1F2F5A]/60 font-medium animate-reveal [animation-delay:600ms] leading-relaxed max-w-2xl mx-auto px-4">
               Solutions Nest deliver strategic technical expertise to transform your vision into global success.
             </p>
@@ -92,14 +92,14 @@ export function HomeContent() {
 
           {/* CTA Group */}
           <div className="flex flex-col sm:flex-row items-center gap-6 w-full justify-center animate-reveal [animation-delay:400ms] mt-16">
-            <a 
-              href="tel:+919008011333" 
+            <a
+              href="tel:+919845133461"
               className="btn-shimmer flex items-center justify-center w-full sm:w-auto px-14 py-6 bg-[#1F2F5A] text-white rounded-2xl font-black text-2xl shadow-2xl shadow-[#1F2F5A]/20 active:scale-95 transition-all"
             >
               Get Started →
             </a>
-            <Link 
-              href="/#services" 
+            <Link
+              href="/#services"
               className="flex items-center justify-center w-full sm:w-auto px-14 py-6 bg-white/70 backdrop-blur-xl text-[#1F2F5A] rounded-2xl font-black text-2xl border border-[#1F2F5A]/10 hover:bg-white/40 active:scale-95 transition-all uppercase"
             >
               Our Expertise
@@ -139,8 +139,8 @@ export function HomeContent() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#F57C00]/5 to-transparent pointer-events-none" />
         <div className="flex animate-marquee-fast gap-12 whitespace-nowrap items-center">
           {[
-            "Web Development", "App Engineering", "Digital Marketing", 
-            "Legal & Compliance", "Financial Planning", "HR Solutions", 
+            "Web Development", "App Engineering", "Digital Marketing",
+            "Legal & Compliance", "Financial Planning", "HR Solutions",
             "Brand Identity", "UI/UX Design", "Company Incorporation",
             "Statutory Registrations", "Tax Planning", "Recruitment"
           ].map((item, i) => (
@@ -151,8 +151,8 @@ export function HomeContent() {
           ))}
           {/* Duplicate for seamless loop (Second Set) */}
           {[
-            "Web Development", "App Engineering", "Digital Marketing", 
-            "Legal & Compliance", "Financial Planning", "HR Solutions", 
+            "Web Development", "App Engineering", "Digital Marketing",
+            "Legal & Compliance", "Financial Planning", "HR Solutions",
             "Brand Identity", "UI/UX Design", "Company Incorporation",
             "Statutory Registrations", "Tax Planning", "Recruitment"
           ].map((item, i) => (
@@ -167,7 +167,7 @@ export function HomeContent() {
       {/* Services Section - WHITE */}
       <section id="services" className="py-24 px-6 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-[#1F2F5A]/5 to-transparent" />
-        
+
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-20">
             <h2 className="text-[#F57C00] font-bold tracking-[0.3em] uppercase text-xs">Our Expertise</h2>
@@ -176,12 +176,12 @@ export function HomeContent() {
               We offer a comprehensive suite of services designed to support your business at every stage of its journey.
             </p>
           </div>
-          
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <Link 
+              <Link
                 href={`/services/${service.slug}`}
-                key={index} 
+                key={index}
                 className="group p-8 rounded-[2.5rem] bg-[#F5F7FA] border border-[#1F2F5A]/5 hover:border-[#F57C00]/30 hover:shadow-2xl hover:shadow-[#1F2F5A]/5 transition-all duration-500 hover:-translate-y-2"
               >
                 <div className="w-16 h-16 bg-white border border-[#1F2F5A]/5 rounded-[1.5rem] flex items-center justify-center text-3xl mb-8 group-hover:bg-[#F57C00]/10 group-hover:border-[#F57C00]/20 transition-all">
@@ -204,7 +204,7 @@ export function HomeContent() {
       <section id="about" className="py-20 px-4 md:px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto w-full bg-[#1F2F5A] rounded-[2.5rem] md:rounded-[4rem] px-6 py-12 md:p-20 text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#F57C00]/20 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2" />
-          
+
           <div className="relative z-10 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             <div className="space-y-6 md:space-y-8">
               <h3 className="text-3xl md:text-5xl font-black leading-tight tracking-tight">Rooted in Bangalore,<br className="hidden md:block" /> Serving the World.</h3>
@@ -225,7 +225,7 @@ export function HomeContent() {
                 ))}
               </ul>
             </div>
-            
+
             <div className="bg-white/[0.03] backdrop-blur-2xl p-8 md:p-12 rounded-[2rem] space-y-8 border border-white/10 shadow-2xl relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-[#F57C00]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative z-10 space-y-4">
